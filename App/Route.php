@@ -31,6 +31,11 @@ class Route {
                 }
             }
             exit();
+        } else {
+            // handle 404 page
+            require_once "App/controllers/_404Controller.php";
+            $controller = new _404Controller;
+            $controller->index();
         }
         return false;
     }
