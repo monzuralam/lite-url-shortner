@@ -4,7 +4,6 @@ class App {
      * Run
      */
     public function run() {
-        echo "Application has been started.";
         $this->route();
     }
 
@@ -12,5 +11,6 @@ class App {
      * Register Route
      */
     public function route() {
+        Route::get('/', 'HomeController', 'index');
     }
 }
